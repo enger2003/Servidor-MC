@@ -82,7 +82,7 @@ Añadir servidor:
     ```
     ifconfig
     ```
-    ![imagen_ifconfig](./ifconfig.png)
+    ![imagen_ifconfig](./img/ifconfig.png)
 
     ```
     Pequña aclaración: las 2 marcas rojas son las interfaces, si tienes 2 tarjetas de red y una tarjeta  
