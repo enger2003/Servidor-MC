@@ -103,4 +103,4 @@ Añadir servidor:
     ```
     ifconfig
     ```
-    ![Imagen_ifconfig](./ifconfig.png)
+    ![imagen_ifconfig](./ifconfig.png)
