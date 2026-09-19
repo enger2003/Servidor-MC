@@ -7,9 +7,8 @@ Trabajaremos con las opciones básicas a su vez que podremos gestionar algunos e
 ```
 .
 ├── 📄 README.md                <-- Guía rápida e índice
-├── 📄 eula.txt                <-- Aceptación de la EULA (EULA=true)
 ├── ⚙️ start.sh                <-- Script de inicio para Linux/Mac
-├── 🔧 server.properties  <-- Configuración principal
+├── 🔧 server.properties  <-- Configuración principal (explicación de cada campo)
 ```
 
 ## Descarga del servidor
@@ -62,6 +61,7 @@ java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui
 1) El servidor se cerrará y tendrás que aceptar/activar "eula". Dentro de los archivos creados es cambiar un campo de "false" a "true", estos cambios los haremos con "nano" pero se pueden hacer con cualquier editor de texto, la aclaración es por si hace falta la instrucción inicial para como salir de la edición de "nano" :)
 
 ```
+sudo apt install nano
 nano eula.txt
 
 ("Ctrl + X" para salir, "Y" para decirle que se guarde, "enter" para que se quede con el nombre)
