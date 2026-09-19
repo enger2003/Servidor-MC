@@ -7,18 +7,16 @@ Trabajaremos con las opciones básicas a su vez que podremos gestionar algunos e
 ```
 .
 ├── 📄 README.md                <-- Guía rápida e índice
-├── 📄 .gitignore              <-- Archivos a excluir (logs, mundos)
 ├── 📄 eula.txt                <-- Aceptación de la EULA (EULA=true)
 ├── ⚙️ start.sh                <-- Script de inicio para Linux/Mac
-├── 📁 config/                 <-- Plantillas de configuración
-│   ├── 🔧 server.properties  <-- Configuración principal
+├── 🔧 server.properties  <-- Configuración principal
 ```
 
 ## Descarga del servidor
 Se tiene que descargar desde la página oficial de mojang, ya sea buscando "minecraft server mojang" o aquí -> https://www.minecraft.net/es-es/download/server
 
 ## Instalación java
-Tenemos que instalar la versión correcta de java. Para ver la versión instalada simplemente hacemos
+Tenemos que instalar la versión correcta de java. Para ver la versión instalada simplemente abrimos una terminal de linux y pegamos el siguiente comando.
 ```
 java --version
 ```
@@ -34,7 +32,7 @@ sudo apt install temurin-25-jdk
 ```
 
 ## Arranque inicial del servidor
-Ahora con java configurado, procedemos a arrancar el servidor previamente descargado [Miencraft Server](https://www.minecraft.net/es-es/download/server)
+Ahora con java instalado, procedemos a arrancar el servidor previamente descargado [Miencraft Server](https://www.minecraft.net/es-es/download/server)
 
 ```
 java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui
@@ -47,37 +45,15 @@ Vamos a separar este comando en varias partes:
 * minecraft_server.26.3.jar: El nombre del servidor (el archivo)
 * nogui: Sin interfaz gráfica, solo terminal
 
-Si quisieramos por ejemplo ponerle 6 Gigabytes de ram mínima y 8 Gigabytes de ram máxima (expresados en MegaBytes ambos), y el archivo se llamara "server.jar" usaríamos el siguiente comando
-
-```
-java -Xmx8192M -Xms6144M -jar server.jar nogui
-```
-Que es igual que
+Si quisieramos por ejemplo ponerle 6 Gigabytes de ram mínima y 8 Gigabytes de ram máxima, y el archivo se llamara "server.jar" usaríamos el siguiente comando
 
 ```
 java -Xmx8G -Xms6G -jar server.jar nogui
 ```
 
-## Error Java comun (saltar si no da error)
-
-Si tras hacer el comando anterior nos salta un error de este tipo:
-
-```
-Error: Se ha producido un error de enlace al cargar la clase principal net.minecraft.bundler.Main
-    java.lang.UnsupportedClassVersionError: net/minecraft/bundler/Main
-    has been compiled by a **more recent version of the Java** Runtime (**class file version 69.0**),
-    this version of the Java Runtime only recognizes class file versions up to 65.0
-
-```
-
-Con lo de "more recent version of Java" deducimos que tenemos una versión más antigua
-Con lo de "class file version 69.0" y una pequeña búsqueda, descubrimos que necesitamos Java 25 para estos archivos
-
-Significa que necesitamos una versión mas moderna de Java, la solución sería buscar por Internet como descargar la versión necesaria y estaría arreglado.
-
 ## Arranque servidor
 
-Tras realizar el comando de antes por primera vez sin errores, se nos crearán varios archivos
+Tras realizar el arranque inicial, se nos crearán varios archivos
 
 ```
 java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui
@@ -91,12 +67,12 @@ nano eula.txt
 ("Ctrl + X" para salir, "Y" para decirle que se guarde, "enter" para que se quede con el nombre)
 ```
 
-2) Una vez cambiado y guardado el archivo, arrancamos de nuevo el servidor (java -Xmx...). El servidor se abrirá y se crearán los archivos necesarios para su funcionamiento. Entre los archivos creados hay uno llamado "server.properties", en este repositorio he puesto uno de prueba (el oficial hasta la fecha) para poder verlo
+2) Una vez cambiado y guardado el archivo, arrancamos de nuevo el servidor (java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui). El servidor se abrirá y se crearán los archivos necesarios para su funcionamiento. Entre los archivos creados hay uno llamado "server.properties", en este repositorio he puesto uno de prueba (el oficial hasta la fecha) para poder verlo
 
 En este archivo es donde se hacen las modificaciones del mundo (hay que reiniciar el servidor para que se apliquen), dificultad de la partida, pvp, altura max, whitelist y blacklist, etc...
 A su vez encontraremos las opciones necesarias de Ip, rcon y demás para poder configurarlo para la conexión
 
-3) Ahora mismo el servidor está operativo y listo para entrar **estando en la red Local**, pero queremos que se pueda conectar cualquiera desde donde sea, para lo cual usaremos una VPN a elegir por el usuario (todos los jugadores la misma, al igual que la del servidor) Hamachi, RadminVPN...
+3) Ahora mismo el servidor está operativo y listo para entrar **estando en la red Local**, pero queremos que se pueda conectar cualquiera desde donde sea, para lo cual usaremos una VPN a elegir por el usuario (todos los jugadores la misma, al igual que la del servidor) Zero Tier(recomendada), Hamachi, RadminVPN... Tiene que ser una que se pueda instalar tanto en linux como en el sistema operativo de los clientes (normalmente windows)
 
 4) Con esto listo (lo puede probar primero el que hace el servidor en local sin vpn para ver que todo funciona), se abre el cliente de Minecraft en la versión especificada en la que se ha creado.
 Añadir servidor:
@@ -108,10 +84,10 @@ Añadir servidor:
     ![imagen_ifconfig](./ifconfig.png)
 
     ```
-    Pequña aclaración: las 2 marcas rojas son las interfaces, si tienes 2 tarjetas de red y una tarjeta\b
-    Bluetooth te deberían salir mínimo 3 interfaces, la ip que tienes que buscar es la de la interfaz\b
-    que estés usando, si estas conectado por "ethernet", por cable, deberás buscar en la de "ethernet".\b
-    Igualmente solo deberías poder ver una ip válida, la cual se encuentra en el recuadro azul\b
+    Pequña aclaración: las 2 marcas rojas son las interfaces, si tienes 2 tarjetas de red y una tarjeta  
+    Bluetooth te deberían salir mínimo 3 interfaces, la ip que tienes que buscar es la de la interfaz  
+    que estés usando, si estas conectado por "ethernet", por cable, deberás buscar en la de "ethernet".  
+    Igualmente solo deberías poder ver una ip válida, la cual se encuentra en el recuadro azul  
     correspondiente a su interfaz.
     ```
 
