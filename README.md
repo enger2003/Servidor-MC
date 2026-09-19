@@ -56,10 +56,9 @@ Que es igual que
 java -Xmx8G -Xms6G -jar server.jar nogui
 ```
 
+## Error Java comun (saltar si no da error)
 
-
-
-
+Si tras hacer el comando anterior nos salta un error de este tipo:
 
 ```
 Error: Se ha producido un error de enlace al cargar la clase principal net.minecraft.bundler.Main
@@ -72,3 +71,36 @@ Error: Se ha producido un error de enlace al cargar la clase principal net.minec
 Con lo de "more recent version of Java" deducimos que tenemos una versión más antigua
 Con lo de "class file version 69.0" y una pequeña búsqueda, descubrimos que necesitamos Java 25 para estos archivos
 
+Significa que necesitamos una versión mas moderna de Java, la solución sería buscar por Internet como descargar la versión necesaria y estaría arreglado.
+
+## Arranque servidor
+
+Tras realizar el comando de antes por primera vez sin errores, se nos crearán varios archivos
+
+```
+java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui
+```
+
+1) El servidor se cerrará y tendrás que aceptar/activar "eula". Dentro de los archivos creados es cambiar un campo de "false" a "true", estos cambios los haremos con "nano" pero se pueden hacer con cualquier editor de texto, la aclaración es por si hace falta la instrucción inicial para como salir de la edición de "nano" :)
+
+```
+nano eula.txt
+
+("Ctrl + X" para salir, "Y" para decirle que se guarde, "enter" para que se quede con el nombre)
+```
+
+2) Una vez cambiado y guardado el archivo, arrancamos de nuevo el servidor (java -Xmx...). El servidor se abrirá y se crearán los archivos necesarios para su funcionamiento. Entre los archivos creados hay uno llamado "server.properties", en este repositorio he puesto uno de prueba (el oficial hasta la fecha) para poder verlo
+
+En este archivo es donde se hacen las modificaciones del mundo (hay que reiniciar el servidor para que se apliquen), dificultad de la partida, pvp, altura max, whitelist y blacklist, etc...
+A su vez encontraremos las opciones necesarias de Ip, rcon y demás para poder configurarlo para la conexión
+
+3) Ahora mismo el servidor está operativo y listo para entrar **estando en la red Local**, pero queremos que se pueda conectar cualquiera desde donde sea, para lo cual usaremos una VPN a elegir por el usuario (todos los jugadores la misma, al igual que la del servidor) Hamachi, RadminVPN...
+
+4) Con esto listo (lo puede probar primero el que hace el servidor en local sin vpn para ver que todo funciona), se abre el cliente de Minecraft en la versión especificada en la que se ha creado.
+Añadir servidor:
+    - Nombre: Indiferente
+    - IP: La ip de la máquina donde se ejecute, como se mira esto, al estar en linux, se usa el comando
+    ```
+    ifconfig
+    ```
+    ![Imagen_ifconfig](./ifconfig.png)
