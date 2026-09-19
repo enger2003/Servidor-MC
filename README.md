@@ -8,6 +8,7 @@ Trabajaremos con las opciones básicas a su vez que podremos gestionar algunos e
 .
 ├── 📄 README.md                <-- Confiugración y arranque del servidor
 ├── 📄 VPN.md                   <-- Instalación y configuración VPN (Zero Tier)
+├── 📄 VPN.md                   <-- Monitorización remota ()
 ├── ⚙️ restart.sh               <-- Script para reiniciar servidor Linux
 ├── 🔧 server.properties        <-- Configuración principal (explicación de cada campo)
 ```
