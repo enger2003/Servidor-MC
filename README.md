@@ -33,7 +33,10 @@ sudo apt install temurin-25-jdk
 
 ## Arranque inicial del servidor
 Ahora con java configurado, procedemos a arrancar el servidor previamente descargado [Miencraft Server](https://www.minecraft.net/es-es/download/server)
-```java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui```
+
+```
+java -Xmx4G -Xms4G -jar minecraft_server.26.3.jar nogui
+```
 
 Vamos a separar este comando en varias partes:
 * -Xmx4G: Significa la ram **máxima** que queremos darle al servidor expresada en Gigabytes (en este caso 4)
@@ -43,9 +46,15 @@ Vamos a separar este comando en varias partes:
 * nogui: Sin interfaz gráfica, solo terminal
 
 Si quisieramos por ejemplo ponerle 6 Gigabytes de ram mínima y 8 Gigabytes de ram máxima (expresados en MegaBytes ambos), y el archivo se llamara "server.jar" usaríamos el siguiente comando
-```java -Xmx8192M -Xms6144M -jar server.jar nogui```
+
+```
+java -Xmx8192M -Xms6144M -jar server.jar nogui
+```
 Que es igual que
-```java -Xmx8G -Xms6G -jar server.jar nogui```
+
+```
+java -Xmx8G -Xms6G -jar server.jar nogui
+```
 
 
 
@@ -54,7 +63,9 @@ Que es igual que
 
 ```
 Error: Se ha producido un error de enlace al cargar la clase principal net.minecraft.bundler.Main
-    java.lang.UnsupportedClassVersionError: net/minecraft/bundler/Main has been compiled by a **more recent version of the Java** Runtime (**class file version 69.0**), this version of the Java Runtime only recognizes class file versions up to 65.0
+    java.lang.UnsupportedClassVersionError: net/minecraft/bundler/Main
+    has been compiled by a **more recent version of the Java** Runtime (**class file version 69.0**),
+    this version of the Java Runtime only recognizes class file versions up to 65.0
 
 ```
 
