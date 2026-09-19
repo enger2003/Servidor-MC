@@ -17,9 +17,11 @@ Trabajaremos con las opciones básicas a su vez que podremos gestionar algunos e
 ## Descarga del servidor
 Se tiene que descargar desde la página oficial de mojang, ya sea buscando "minecraft server mojang" o aquí -> https://www.minecraft.net/es-es/download/server
 
-## Inatalación java
+## Instalación java
 Tenemos que instalar la versión correcta de java. Para ver la versión instalada simplemente hacemos
-```java --version```
+```
+java --version
+```
 
 En nuestro caso vamos a instalar java 25, ya que a fecha de creación de este repositorio no se puede instalar java 25 de forma cómoda, lo haremos delegando en otro repositorio
 ```
@@ -112,3 +114,5 @@ Añadir servidor:
     Igualmente solo deberías poder ver una ip válida, la cual se encuentra en el recuadro azul\b
     correspondiente a su interfaz.
     ```
+
+Los clientes (con la VPN activa o estando en local) deberán esa ip para ponerla en los servidores para poder conectarse. Con esto hecho, el servidor está listo para funcionar cuando se abra :)
