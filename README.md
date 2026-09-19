@@ -106,7 +106,9 @@ Añadir servidor:
     ![imagen_ifconfig](./ifconfig.png)
 
     ```
-    Pequña aclaración: las 2 marcas rojas son las interfaces, si tienes 2 tarjetas de red y una tarjeta Bluetooth te deberían salir\b mínimo 3 interfaces, la ip que tienes que buscar es la de la interfaz que estés usando, si estas conectado por "ethernet",\b
-    por cable, deberás buscar en la de "ethernet". Igualmente solo deberías poder ver una ip válida, la cual se\b
-    encuentra en el recuadro azul correspondiente a su interfaz
+    Pequña aclaración: las 2 marcas rojas son las interfaces, si tienes 2 tarjetas de red y una tarjeta\b
+    Bluetooth te deberían salir mínimo 3 interfaces, la ip que tienes que buscar es la de la interfaz\b
+    que estés usando, si estas conectado por "ethernet", por cable, deberás buscar en la de "ethernet".\b
+    Igualmente solo deberías poder ver una ip válida, la cual se encuentra en el recuadro azul\b
+    correspondiente a su interfaz.
     ```
