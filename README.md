@@ -6,9 +6,10 @@ Antes de nada, estas instrucciones están preparadas para el montaje en un siste
 Trabajaremos con las opciones básicas a su vez que podremos gestionar algunos errores referentes a java y preparar scripts para poder modificar, apagar y encender el servidor de forma remota
 ```
 .
-├── 📄 README.md                <-- Guía rápida e índice
-├── ⚙️ start.sh                <-- Script de inicio para Linux/Mac
-├── 🔧 server.properties  <-- Configuración principal (explicación de cada campo)
+├── 📄 README.md                <-- Confiugración y arranque del servidor
+├── 📄 VPN.md                   <-- Instalación y configuración VPN (Zero Tier)
+├── ⚙️ restart.sh               <-- Script para reiniciar servidor Linux
+├── 🔧 server.properties        <-- Configuración principal (explicación de cada campo)
 ```
 
 ## Descarga del servidor
